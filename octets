@@ -1,0 +1,2 @@
+four_octet=bin(int(str(ip_list[3])))[2:].zfill(8)
+
