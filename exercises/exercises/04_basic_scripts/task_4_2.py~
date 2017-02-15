@@ -18,7 +18,7 @@ Enter device name: r1
 'location': '21 New Globe Walk', 'ip': '10.255.0.1'}
 
 """
-device_name = raw_input('Enter device name: ')#запись вывода в переменную
+device_name = raw_input('Enter device name: ')
 
 london_co = {
     'r1' : {
@@ -46,4 +46,4 @@ london_co = {
     }
 }
 
-print london_co[device_name] #вывод значений нужного ключа
+print london_co[device_name]

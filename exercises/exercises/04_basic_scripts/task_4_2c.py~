@@ -48,4 +48,4 @@ london_co = {
 }
 device_name = raw_input('Enter device name: ')
 parameter_name = raw_input('Enter parameter name: {} '.format(london_co[device_name].keys()))
-print london_co[device_name].get(parameter_name, 'Такого параметра нет')#простейшая проверка без if
+print london_co[device_name].get(parameter_name, 'Такого параметра нет')

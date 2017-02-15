@@ -1,25 +1,16 @@
 # -*- coding: utf-8 -*-
+from sys import argv
 """
-Задание 4.1a
+Задание 4.1b
 
-Всё, как в задании 4.1. Но, если пользователь ввел адрес хоста, а не адрес сети,
-то надо адрес хоста преобразовать в адрес сети и вывести адрес сети и маску, как в задании 4.1.
-
-Network:
-10        1         1         0
-00001010  00000001  00000001  00000000
-
-Mask:
-/24
-255       255       255       0
-11111111  11111111  11111111  00000000
-
-Проверить работу скрипта на разных комбинациях сеть/маска.
+Преобразовать скрипт из задания 4.1a таким образом, чтобы сеть/маска не запрашивались у пользователя,
+а передавались как аргумент скрипту.
 """
 
-net = raw_input('Enter ip network in this format: 10.1.1.0/24: ')
+net = str(argv[1:])
 #После ввода префикса мне нужно выделить саму сеть и маску
 prefix_and_mask=net.split('/') #разделитель по слешу
+print prefix_and_mask
 '''
 тогда вывод будет такой:
 prefix_and_mask
@@ -54,12 +45,12 @@ mask_bin_octet_4=bin(int(str(prefix_mask_dec[3])))[2:].zfill(8)
 
 
 
-prefix_bin_1=bin(int(prefix_bin_1,2)&int(mask_bin_octet_1,2))[2:].zfill(8)#тут происходит логическое и маски и адреса. это нужно чтобы получить по заданию адрес сети из адреса хоста
+prefix_bin_1=bin(int(prefix_bin_1,2)&int(mask_bin_octet_1,2))[2:].zfill(8)#тут происходит логическое "и" маски и адреса. это нужно чтобы получить по заданию адрес сети из адреса хоста
 prefix_bin_2=bin(int(prefix_bin_2,2)&int(mask_bin_octet_2,2))[2:].zfill(8)
 prefix_bin_3=bin(int(prefix_bin_3,2)&int(mask_bin_octet_3,2))[2:].zfill(8)
 prefix_bin_4=bin(int(prefix_bin_4,2)&int(mask_bin_octet_4,2))[2:].zfill(8)
 
-prefix_dec[0]=int(prefix_bin_1,2)
+prefix_dec[0]=int(prefix_bin_1,2)#тут перевожу двоичное представление каждого октета префикса в 10 систему счисления
 prefix_dec[1]=int(prefix_bin_2,2)
 prefix_dec[2]=int(prefix_bin_3,2)
 prefix_dec[3]=int(prefix_bin_4,2)

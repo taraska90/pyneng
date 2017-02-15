@@ -34,5 +34,5 @@ elif first_octet < 240:
 elif first_octet > 240:
     if ip_address == '255.255.255.255':
         print 'local broadcast'    
-    else:    
+    else    
         print 'unused'    

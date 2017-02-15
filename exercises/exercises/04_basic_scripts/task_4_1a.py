@@ -47,19 +47,19 @@ for t in range(4):
         if mask < 0:
             mask = 0       
 prefix_mask_dec=mask_dec.split('.') #сделаю список по октетам
-mask_bin_octet_1=bin(int(str(prefix_mask_dec[0])))[2:].zfill(8)
+mask_bin_octet_1=bin(int(str(prefix_mask_dec[0])))[2:].zfill(8)#здесь я получаю из каждого октета адреса в десятичном виде его двоичное представление
 mask_bin_octet_2=bin(int(str(prefix_mask_dec[1])))[2:].zfill(8)
 mask_bin_octet_3=bin(int(str(prefix_mask_dec[2])))[2:].zfill(8)
 mask_bin_octet_4=bin(int(str(prefix_mask_dec[3])))[2:].zfill(8)
 
 
 
-prefix_bin_1=bin(int(prefix_bin_1,2)&int(mask_bin_octet_1,2))[2:].zfill(8)
+prefix_bin_1=bin(int(prefix_bin_1,2)&int(mask_bin_octet_1,2))[2:].zfill(8)#тут происходит логическое "и" маски и адреса. это нужно чтобы получить по заданию адрес сети из адреса хоста
 prefix_bin_2=bin(int(prefix_bin_2,2)&int(mask_bin_octet_2,2))[2:].zfill(8)
 prefix_bin_3=bin(int(prefix_bin_3,2)&int(mask_bin_octet_3,2))[2:].zfill(8)
 prefix_bin_4=bin(int(prefix_bin_4,2)&int(mask_bin_octet_4,2))[2:].zfill(8)
 
-prefix_dec[0]=int(prefix_bin_1,2)
+prefix_dec[0]=int(prefix_bin_1,2)#тут перевожу двоичное представление каждого октета префикса в 10 систему счисления
 prefix_dec[1]=int(prefix_bin_2,2)
 prefix_dec[2]=int(prefix_bin_3,2)
 prefix_dec[3]=int(prefix_bin_4,2)

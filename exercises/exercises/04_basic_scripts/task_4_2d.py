@@ -40,3 +40,7 @@ london_co = {
     'routing': True
     }
 }
+device_name = raw_input('Enter device name: ')
+parameter_name = raw_input('Enter parameter name: {} '.format(london_co[device_name].keys()))
+parameter_name=parameter_name.lower()#преобразует любой регистр в низкий, насколько я понимаю
+print london_co[device_name].get(parameter_name, 'Такого параметра нет')

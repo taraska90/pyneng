@@ -1,19 +1,17 @@
 # -*- coding: utf-8 -*-
 """
-Задание 4.2b
+Задание 4.2d
 
 В этой задаче нельзя использовать условие if и нельзя изменять словарь london_co.
 
-Переделать скрипт из задания 4.2a таким образом, чтобы, при запросе параметра,
-отображался список возможных параметров.
-
-Вывести информацию о соответствующем параметре, указанного устройства.
+Переделать скрипт из задания 4.2c таким образом, чтобы, при запросе параметра,
+пользователь мог вводить название параметра в любом регистре.
 
 Пример выполнения скрипта:
-$ python task_4_2b.py
+$ python task_4_2d.py
 Enter device name: r1
-Enter parameter name (ios,model,vendor,location,ip): ip
-10.255.0.1
+Enter parameter name (ios,model,vendor,location,ip): IOS
+15.4
 
 """
 
@@ -42,8 +40,7 @@ london_co = {
     'routing': True
     }
 }
-
-
 device_name = raw_input('Enter device name: ')
-parameter_name = raw_input('Enter parameter name: {} '.format(london_co[device_name].keys()))#позволяет нам вывести возможные значения ключей
-print london_co[device_name][parameter_name]
+parameter_name = raw_input('Enter parameter name: {} '.format(london_co[device_name].keys()))
+parameter_name=parameter_name.lower()
+print london_co[device_name].get(parameter_name, 'Такого параметра нет')

@@ -21,9 +21,11 @@ for position, octet in enumerate(ip_address_list, 1):
         int(octet)            
     except ValueError:
         print 'введите число'
+        break
 for position, octet in enumerate(ip_address_list, 1):
     if int(octet) > 255 or int(octet) < 0 or int(position) != 4:
         print 'Incorrect IPv4 address'
+        break
 if first_octet == 0:
     print 'unassigned'
 elif first_octet < 128:

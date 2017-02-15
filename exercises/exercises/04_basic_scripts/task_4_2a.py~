@@ -43,6 +43,6 @@ london_co = {
     }
 }
 
-device_name = raw_input('Enter device name: ')#запись вывода в переменную- имя устройства
-parameter_name = raw_input('Enter parameter name: ')#запись вывода в переменную - параметр устройства
-print london_co[device_name][parameter_name] #вывод ключей
+device_name = raw_input('Enter device name: ')
+parameter_name = raw_input('Enter parameter name: ')
+print london_co[device_name][parameter_name]
