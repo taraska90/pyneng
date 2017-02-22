@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from sys import argv
 '''
 Задание 6.2
 
@@ -11,8 +10,8 @@ from sys import argv
 
 Между строками не должно быть дополнительного символа перевода строки.
 '''
-file_name = argv[1]
-with open(file_name, 'r') as f:
+
+with open('config_sw1.txt', 'r') as f:
     for line in f:
         if line.startswith('!'):
             don=line          

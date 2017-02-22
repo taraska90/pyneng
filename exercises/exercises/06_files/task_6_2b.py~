@@ -27,6 +27,11 @@ with open(file_name, 'r') as f:
         if line.startswith('!') | line.startswith(ignore[2]):# если строка начинается с ! или Current configuration
             don=line#обнуляю строку
         else:
-             with open('config_sw1_cleared.txt', 'a+') as f2:                                                
-                f2.write(line)        
+             with open('config_sw1_cleared.txt', 'a+') as f2:                                  
+                #print type(line)#line=''.join(line)            
+                #conf_line=''.join(line)  
+                #print type(line)
+                #print ''.join(line)               
+                f2.write(line)
+            #print ''.join(line.split('\n'))#иначе собираю в список по какому символу?
         line=list(line)

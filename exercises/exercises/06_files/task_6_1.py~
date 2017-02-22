@@ -23,9 +23,9 @@ with open('ospf.txt', 'r') as f:
         out_interf=line[53:]
         if line[0]=='O':
             protocol='OSPF'    
-        print 'Protocol:                   {0}'.format(protocol)   
-        print 'Prefix:                     {0}'.format(prefix)
-        print 'AD/Metric:                  {0}'.format(metric)
-        print 'Next-Hop:                   {0}'.format(next_hop)
-        print 'Last update:                {0}'.format(update)
+        print 'Protocol:         {0}'.format(protocol)   
+        print 'Prefix:         {0}'.format(prefix)
+        print 'AD/Metric:         {0}'.format(metric)
+        print 'Next-Hop:         {0}'.format(next_hop)
+        print 'Last update:         {0}'.format(update)
         print 'Outbound Interface:         {0}'.format(out_interf)
