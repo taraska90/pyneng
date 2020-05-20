@@ -20,7 +20,7 @@ fedup==0.9.0
 fros==1.0
 glusterfs-api==3.5.4
 gps==3.9
-httplib2==0.7.7
+httplib2==0.18.0
 iniparse==0.4
 initial-setup==0.3.10.1
 javapackages==1.0.0
