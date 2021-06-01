@@ -68,7 +68,7 @@ spambayes==1.1b1
 stevedore==1.20.0
 uniconvertor==2.0
 urlgrabber==3.10.1
-urllib3==1.8.2
+urllib3==1.26.5
 virtualenv==15.1.0
 virtualenv-clone==0.2.6
 virtualenvwrapper==4.7.2
