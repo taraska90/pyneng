@@ -3,7 +3,7 @@ Exscript==2.1.503
 IPy==0.75
 Jinja2==2.7.3
 MarkupSafe==0.18
-Pillow==2.2.1
+Pillow==8.2.0
 PyYAML==3.10
 SSSDConfig==1.11.7
 ansible==2.3.0
