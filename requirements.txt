@@ -54,7 +54,7 @@ pytz==2012d
 pyxattr==0.5.1
 pyxdg==0.25
 pyzabbix==0.7.2
-reportlab==3.1.8
+reportlab==3.5.55
 requests==1.2.3
 rpm-python==4.11.3
 scdate==1.10.7
